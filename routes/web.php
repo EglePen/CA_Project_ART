@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminArtistController;
 use App\Http\Controllers\Admin\AdminMethodController;
-use App\Http\Controllers\Admin\AdminCountryController;
 use App\Http\Controllers\Admin\AdminLocationController;
 use App\Http\Controllers\Admin\AdminMovementController;
 use App\Http\Controllers\Admin\AdminPaintingController;
@@ -32,7 +31,6 @@ Route::prefix('admin')->name('admin.')->group( function () {
         'methods' => AdminMethodController::class,
         'movements' => AdminMovementController::class,
         'locations' => AdminLocationController::class,
-        'countries' =>AdminCountryController:: class,
     ]);
 });
 

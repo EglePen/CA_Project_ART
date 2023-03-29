@@ -25,7 +25,7 @@ class Painting extends Model
     protected $fillable = [
         'title',
         'image',
-        'date_created',
+        'year_created',
         'description',
     ];
 

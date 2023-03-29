@@ -17,8 +17,7 @@ class Artist extends Model
     protected $fillable = [
         'first_name',
         'last_name',
-        'birth_year',
-        'death_year',
+        'date_of_birth',
     ];
 
     public function paintings(): BelongsToMany

@@ -34,5 +34,10 @@ Route::prefix('admin')->name('admin.')->group( function () {
     ]);
 });
 
+Route::name('front.')->group( function () {
+    Route::get('/', [FrontHomeController::class, 'index'])->name('home');
+    Route::resource('movies', FrontPaintingController::class)->only(['index','show']);
+});
+
 
 

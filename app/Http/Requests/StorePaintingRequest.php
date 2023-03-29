@@ -22,7 +22,10 @@ class StorePaintingRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title' => 'required|max:100',
+            'image' => 'required',
+            'year_created' => 'required|numeric',
+            'description' => 'required',
         ];
     }
 }

@@ -20,7 +20,7 @@
 
             <div class="form-group">
                 <label for="year-created">Years</label>
-                <input type="number" min="1800" max="2099" step="1" value="2023" class="form-control" name="year_created" id="year-created" >
+                <input type="number" min="1800" max="2099" step="1"  class="form-control" name="year_created" id="year-created" >
             </div>
 
             <div class="form-group">

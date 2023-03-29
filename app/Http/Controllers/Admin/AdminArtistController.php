@@ -50,8 +50,8 @@ class AdminArtistController extends Controller
     public function update(UpdateArtistRequest $request, Artist $artist)
     {
         $artist->fill($request->all())->save();
-        // return to_route('admin.artists.index');
-        return redirect()->back();
+        return to_route('admin.artists.index');
+
     }
 
     /**
@@ -59,7 +59,7 @@ class AdminArtistController extends Controller
      */
     public function destroy(Artist $artist)
     {
-        // $artist->delete();
-        // return response()->json(['success' => true]);
+        $artist->delete();
+        return response()->json(['success' => true]);
     }
 }

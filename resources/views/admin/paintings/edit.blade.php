@@ -21,7 +21,7 @@
 
             <div class="form-group">
                 <label for="year-created">Years</label>
-                <input type="number" min="1800" max="2099" step="1" value="2023" class="form-control" name="year_created" value="{{ ($painting->year_created ?? '') }}" id="year_created">
+                <input type="number" min="1800" max="2099" step="1"  class="form-control" name="year_created" value="{{ ($painting->year_created ?? '') }}" id="year_created">
             <div class="form-group">
                 <label for="description">Description</label>
                 <input type="text" class="form-control" name="description" value="{{ ($painting->description ?? '') }}" id="description" placeholder="Description">

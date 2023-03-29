@@ -15,8 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title', 100);
             $table->string('image', 1000);
-            $table->date('date_created');
-            $table->text('dimensions');
+            $table->integer('year_created');
             $table->text('description');
             $table->timestamps();
             $table->softDeletes();

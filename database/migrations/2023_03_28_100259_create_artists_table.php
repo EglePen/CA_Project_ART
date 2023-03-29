@@ -15,8 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('first_name', 50);
             $table->string('last_name', 50);
-            $table->date('birth_year');
-            $table->date('death_year');
+            $table->date('date_of_birth');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -27,6 +27,7 @@
                             <th>Location</th>
                             <th>Movement</th>
                             <th>Method</th>
+                            <th>Colors</th>
                             <th>Created at</th>
                             <th>Updated at</th>
                             <th>Actions</th>
@@ -63,6 +64,11 @@
                                 <td>
                                     @foreach($painting->methods as $method)
                                         {{$method->name}}
+                                    @endforeach
+                                </td>
+                                <td>
+                                    @foreach($painting->colors as $color)
+                                        {{$color->name}}
                                     @endforeach
                                 </td>
                                 <td>{{ ($painting->created_at ?? '') }}</td>

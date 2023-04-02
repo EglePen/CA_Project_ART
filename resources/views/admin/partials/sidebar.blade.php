@@ -32,10 +32,9 @@
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 
-                <li class="nav-header">Data Tables</li>
+                <li class="nav-header">DATA TABES</li>
                 <li class="nav-item">
                     <a href="{{ route('admin.paintings.index') }}" class="nav-link">
-                        <i class="fa-solid fa-table"></i>
                         <p>
                             Paintings
                         </p>
@@ -44,7 +43,6 @@
 
                 <li class="nav-item">
                     <a href="{{ route('admin.artists.index') }}" class="nav-link">
-                        <i class="fa-solid fa-table"></i>
                         <p>
                             Artists
                         </p>
@@ -52,17 +50,31 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('admin.locations.index') }}" class="nav-link">
-                        <i class="fa-solid fa-table"></i>
+                    <a href="{{ route('admin.colors.index') }}" class="nav-link">
                         <p>
-                            Museums
+                            Colors
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('admin.frames.index') }}" class="nav-link">
+                        <p>
+                            Frames
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('admin.locations.index') }}" class="nav-link">
+                        <p>
+                            Locations
                         </p>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a href="{{ route('admin.methods.index') }}" class="nav-link">
-                        <i class="fa-solid fa-table"></i>
                         <p>
                             Methods
                         </p>
@@ -71,7 +83,6 @@
 
                 <li class="nav-item">
                     <a href="{{ route('admin.movements.index') }}" class="nav-link">
-                        <i class="fa-solid fa-table"></i>
                         <p>
                             Movements
                         </p>

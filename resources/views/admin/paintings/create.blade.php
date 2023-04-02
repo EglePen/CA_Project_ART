@@ -28,6 +28,16 @@
                 <input type="text" class="form-control" name="description" id="description" placeholder="Description">
             </div>
 
+            <x-forms.relation-select :tagName="'artists'"  :relationItems="$artists" :optionDisplay="'fullName'"/>
+
+            <x-forms.multi-relation-select :tagName="'colors'" :relationItems="$colors"/>
+
+            <x-forms.relation-select :tagName="'locations'"  :relationItems="$locations"/>
+
+            <x-forms.relation-select :tagName="'movements'"  :relationItems="$movements"/>
+
+            <x-forms.relation-select :tagName="'methods'"  :relationItems="$methods"/> 
+
             <div class="form-group">
                 <x-forms.image-input :label="'cover-image'" :inputName="'image'" :oldInputName="'old_cover_image'"/>
             </div>

@@ -1,0 +1,346 @@
+body, html {
+    /* height: 100%; */
+    margin: auto 0;
+   
+}
+
+* {
+    box-sizing: border-box;
+    font-family:  'Inconsolata', monospace;
+}
+main {
+    background-color: #f9f0d0;
+}
+
+header, main {
+    width: 100%;
+}
+
+/* navigation */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+}
+nav .logo a {
+    font-size: 3rem;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    max-width: 150px;
+    font-weight: 900;
+    text-decoration: none;
+    color:#363636;
+}
+
+nav .links {
+    font-size: 2rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    float:right;
+}
+nav .links li {
+    display: inline-block;
+    margin: 0 40px;
+}
+
+nav .links a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    position: relative;
+    padding: 16px 0;
+    color: #393939;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+nav .links a:hover {
+    color: #c69f73;
+}
+
+nav .links a:hover:before {
+    left: 0;
+    width: 100%;
+}
+
+nav .links a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: .5px;
+    background-color: #c69f73;
+    bottom: calc(-1px);
+    right: 0;
+    transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+/* home page main */
+
+.background-image {
+    background-image:  linear-gradient(0deg, rgba(69, 58, 47, 0.3), rgba(72, 61, 50, 0.4)), url("Cover-photo-optimized.jpg");
+    height: 90vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(3px);
+    margin: 0;
+}
+
+.landing-page {
+    color: #ffffff;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; 
+    background-color: rgba(163, 132, 96, 0.6);
+    line-height: 1;
+    padding: 60px 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.8rem;
+    font-size: 4rem;
+    box-shadow: 0px 0px 6px 3px rgba(0,0,0,0.4); 
+}
+
+.landing-page h2{
+    font-weight: 300;
+    word-break: break-word;
+    padding-bottom: 2rem;
+}
+
+.landing-page a {
+    padding: 24px 36px;
+    font-size: 1.5rem;
+    color: #393939;
+    background-color: rgb(255, 255, 255, 0.4);
+    border-radius: 1rem;
+    text-decoration: none;
+    letter-spacing: 0.3rem;
+}
+
+.landing-page a:hover {
+    background-color: rgb(255, 255, 255, 0.6);
+}
+
+/* collection of paintings main */
+
+section {
+    background-color: #f9f0d0;
+    padding: 3rem 0;
+    min-height: 80vh;
+    /* min-height: 1000px; */
+    /* height: 100%; */
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+}
+
+.title h2 {
+    font-size: 4rem;
+    font-weight: 300;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    padding: 3rem 0;
+}
+
+.painting-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: auto;
+}
+
+.painting-card {
+    position: relative;
+    width: 500px;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    box-shadow: 1px 1px 3px 0px #d3d3d3;
+    background-color: #ffffff;
+}
+
+.painting-card:hover {
+    box-shadow: 2px 2px 9px 2px #d3d3d3;
+}
+
+.painting-card img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    object-position: left top;
+} 
+
+.painting-card h3 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.painting-card a {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+} 
+
+.painting-card-text {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-align: justify;
+    padding-bottom: 15px;
+}
+
+.painting-card-text span:nth-of-type(odd) {
+    font-weight: bold;
+}
+
+.painting-card-text div {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+
+
+/* single painting show main */
+
+.show-painting-card-wrapper {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.show-painting-card {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.painting-parts {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.painting-parts img {
+    max-width: 250px;
+}
+
+.show-paintings-card-text {
+    font-size: 2rem;
+    line-height: 3rem;
+}
+span:nth-of-type(odd) {
+    font-weight: bold;
+}
+.show-painting-card-description {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: justify;
+    padding-top: 1rem;
+    line-height: 2rem;
+}
+
+.button {
+    margin: 3rem 0;
+    position: relative;
+    width: 300px;
+    height: 80px;
+    background-color: rgb(22, 22, 22, 0.4);
+    padding: 1rem;
+    border-radius: 1rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    box-shadow: 2px 1px 9px 2px #d3d3d3;
+}
+
+.button a {
+   
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.button:hover {
+    
+    border: none;
+    color: #363636;
+    background-color: rgb(255, 255, 255);
+}
+
+/* frames main */
+
+
+.table {
+    max-width: 1400px;
+    background-color: rgb(255, 255, 255, 0.6);
+    font-size: 2rem;
+    margin: 3rem 0rem;
+}
+
+/* contact, about main */
+.art-info-wrapper {
+    margin: auto;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 9rem 0rem;
+    margin: auto 0;
+}
+
+.art-info-wrapper div {
+    max-width: 1200px;
+}
+.info {
+    text-align: center;
+}
+
+.info h2{
+    font-size: 4rem;
+    font-weight: 300;
+    padding: 2rem 0;
+}
+
+.info p {
+    font-size: 2rem;
+    line-height: 3rem;
+}
+.contact-us p {
+    font-size: 4rem;
+    font-weight: 300;
+    margin: 0;
+    text-align: center;
+}
+
+
+
+/* footer */
+footer p{
+    font-size: 2rem;
+    text-align: center;
+    padding: 100px 0px;
+    margin: 0;
+}

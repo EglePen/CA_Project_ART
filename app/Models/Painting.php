@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Color;
 use App\Models\Artist;
 use App\Models\Method;
 use App\Models\Location;
@@ -30,7 +31,7 @@ class Painting extends Model
     ];
 
     //Always query with these relations
-    public $with = [ 'artists', 'locations', 'movements', 'methods', 'images'];
+    public $with = [ 'artists', 'colors', 'locations', 'movements', 'methods', 'images'];
 
     /**
      * @return BelongsToMany
@@ -38,6 +39,14 @@ class Painting extends Model
     public function artists(): BelongsToMany
     {
         return $this->belongsToMany(Artist::class);
+    }
+    
+    /**
+    * @return BelongsToMany
+    */
+    public function colors(): BelongsToMany
+    {
+        return $this->belongsToMany(Color::class);
     }
 
     /**
@@ -55,6 +64,11 @@ class Painting extends Model
     {
         return $this->belongsToMany(Movement::class);
     }
+
+    
+    /**
+    * @return BelongsToMany
+    */
     public function methods(): BelongsToMany
     {
         return $this->belongsToMany(Method::class);
@@ -68,6 +82,11 @@ class Painting extends Model
         return $this->hasMany(PaintingImage::class);
     }
 
+    
+    /**
+     * @param Request $request
+     * @return self
+     */
     public static function customCreate(Request $request): self
     {
         return DB::transaction(function () use ($request) {
@@ -88,11 +107,16 @@ class Painting extends Model
         if ($image = $request->file('image')) {
             $images = $painting->uploadImages([$image]);
         }
+
         return $painting;
         }); 
 
     }
 
+    /**
+     * @param Request $request
+     * @return self
+     */
     public function customUpdate(Request $request): self
     {
         DB::transaction(function () use ($request) {
@@ -118,6 +142,10 @@ class Painting extends Model
         return $this;
     }
 
+    /**
+     * @param $images
+     * @return self
+     */
     public function insertImages($images): self
     {
         collect($images)->each(function (string $item, int $key) {
@@ -126,20 +154,27 @@ class Painting extends Model
                 'painting_id' => $this->id
             ]);
         });
-
         return $this;
     }
 
+    /**
+     * @param Request $request
+     * @return self
+     */
     public function syncAll(Request $request): self
     {
         $this->artists()->sync($request->get('artists'));
+        $this->colors()->sync($request->get('colors'));
         $this->locations()->sync($request->get('locations'));
         $this->methods()->sync($request->get('methods'));
         $this->movements()->sync($request->get('movements'));
-
         return $this;
     }
 
+    /**
+     * @param array $images
+     * @return array
+     */
     public function uploadImages(array $images): array
     {
         $paths = [];

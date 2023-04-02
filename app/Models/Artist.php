@@ -19,14 +19,18 @@ class Artist extends Model
         'last_name',
         'date_of_birth',
     ];
-
+    
+    /**
+    * @return BelongsToMany
+    */
     public function paintings(): BelongsToMany
     {
         return $this->belongsToMany(Painting::class);
     }
 
     /**     
-    * Get the actors's full name.     
+    * Get the actors's full name. 
+    * @return Attribute     
     */
     protected function fullName(): Attribute
     {

@@ -3,12 +3,17 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\RedirectResponse;
 
 class AdminHomeController extends Controller
 {
-    public function index()
+    /**
+     * Display a listing of the resource.
+     * @return RedirectResponse
+     */
+    public function index(): RedirectResponse
     {
-        return view('admin.home');
+        return to_route('admin.paintings.index');
     }
 }
 

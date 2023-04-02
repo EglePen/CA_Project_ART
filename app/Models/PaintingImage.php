@@ -14,7 +14,6 @@ class PaintingImage extends Model
     protected $fillable = [
         'name',
         'painting_id',
-    ];
-    
+    ];   
 }
 ?>

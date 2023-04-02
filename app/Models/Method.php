@@ -15,6 +15,11 @@ class Method extends Model
     protected $fillable = [
         'name',
     ];
+
+    
+    /**
+    * @return BelongsToMany
+    */
     public function paintings(): BelongsToMany
     {
         return $this->belongsToMany(Painting::class);

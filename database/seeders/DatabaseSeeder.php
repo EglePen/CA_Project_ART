@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Database\Seeders\ColorSeeder;
+use Database\Seeders\FrameSeeder;
 use Database\Seeders\MethodSeeder;
 use Database\Seeders\LocationSeeder;
 use Database\Seeders\MovementSeeder;
@@ -26,10 +28,12 @@ class DatabaseSeeder extends Seeder
             ArtistSeeder::class,
             MovementSeeder::class,
             LocationSeeder::class,
+            FrameSeeder::class,
+            ColorSeeder::class,
             ArtistPaintingSeeder::class,
             MethodPaintingSeeder::class,
             MovementPaintingSeeder::class,
-            LocationPaintingSeeder::class
+            LocationPaintingSeeder::class,
         ]);
     }
 }

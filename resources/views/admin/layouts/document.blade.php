@@ -2,48 +2,49 @@
 <html lang="en">
 
 <head>
-  @include('admin.partials.head')
+    @include('admin.partials.head')
 </head>
 
 <body class="hold-transition sidebar-mini">
-  <div class="wrapper">
+    <div class="wrapper">
 
-  @include('admin.partials.navigation')
+        @include('admin.partials.navigation')
 
-  @include('admin.partials.sidebar')
+        @include('admin.partials.sidebar')
 
-    <div class="content-wrapper">
+        <div class="content-wrapper">
 
-      <section class="content-header">
+            <section class="content-header">
 
-      </section>
+                <section class="content">
+                    <div class="container-fluid">
 
-      <section class="content">
-        <div class="container-fluid">
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
 
-          @if ($errors->any())
-          <div class="alert alert-danger">
-              <ul>
-                  @foreach ($errors->all() as $error)
-                      <li>{{ $error }}</li>
-                  @endforeach
-              </ul>
-          </div>
-           @endif
+                        @yield('content')
 
-          @yield('content')
-          
+                    </div>
+                </section>
+
+            </section>
+
         </div>
-      </section>
+
+        @include('admin.partials.footer')
+
+        <aside class="control-sidebar control-sidebar-dark">
+        </aside>
     </div>
 
-    @include('admin.partials.footer')
-
-    <aside class="control-sidebar control-sidebar-dark">
-    </aside>
-  </div>
-
-  @include('admin.partials.javascripts')
+    @include('admin.partials.javascripts')
 </body>
 
 </html>

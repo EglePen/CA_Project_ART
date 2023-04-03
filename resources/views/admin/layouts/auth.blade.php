@@ -8,25 +8,25 @@
 <body class="hold-transition login-page">
 
     @if ($errors->any())
-    <div class="alert alert-danger">
+        <div class="alert alert-danger">
 
-        @foreach ($errors->all() as $error)
-        <div>
-            {{ $error }}
+            @foreach ($errors->all() as $error)
+                <div>
+                    {{ $error }}
+                </div>
+            @endforeach
+
         </div>
-        @endforeach
-
-    </div>
     @endif
 
     @if (session()->has('messages'))
-    <div class="alert alert-success">
-        @foreach (session()->get('messages') as $message)
-        <div>
-            {{ $message }}
+        <div class="alert alert-success">
+            @foreach (session()->get('messages') as $message)
+                <div>
+                    {{ $message }}
+                </div>
+            @endforeach
         </div>
-        @endforeach
-    </div>
     @endif
 
     @yield('content')

@@ -1,29 +1,27 @@
 @extends('admin.layouts.document')
 
 @section('content')
-
-
-<div class="card card-primary">
-    <div class="card-header">
-        <h3 class="card-title">Add Movement</h3>
-    </div>
-    <!-- /.card-header -->
-    <!-- form start -->
-    <form action="{{ route('admin.movements.store') }}" method="POST" enctype="multipart/form-data">
-        @csrf
-        
-        <div class="card-body">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" name="name" id="name" placeholder="Name">
-            </div>
-
-        <!-- /.card-body -->
-
-        <div class="card-footer">
-            <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="card card-primary">
+        <div class="card-header">
+            <h3 class="card-title">{{ Str::title(__('app.add_movement')) }}</h3>
         </div>
-    </form>
-</div>
+        <!-- /.card-header -->
+        <!-- form start -->
+        <form action="{{ route('admin.movements.store') }}" method="POST" enctype="multipart/form-data">
+            @csrf
 
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="name">{{ Str::title(__('app.name')) }}</label>
+                    <input type="text" class="form-control" name="name" id="name"
+                        placeholder="{{ Str::ucfirst(__('app.name')) }}">
+                </div>
+
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">{{ Str::ucfirst(__('app.submit')) }}</button>
+                </div>
+        </form>
+    </div>
 @endsection

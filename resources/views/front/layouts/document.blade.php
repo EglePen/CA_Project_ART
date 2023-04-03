@@ -9,7 +9,7 @@
     <header>
         @include('front.partials.navigation')
     </header>
-    
+
     <main>
         @yield('content')
     </main>

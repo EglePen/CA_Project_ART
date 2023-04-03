@@ -7,11 +7,11 @@
     </ul>
 
     <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto"> 
+    <ul class="navbar-nav ml-auto">
         <li class="nav-item">
             <a href="{{ route('admin.logout') }}" class="nav-link" role="button">
                 <i class="fa-solid fa-right-from-bracket"></i>
-                Logout
+                {{ Str::ucfirst(__('app.logout')) }}
             </a>
         </li>
     </ul>

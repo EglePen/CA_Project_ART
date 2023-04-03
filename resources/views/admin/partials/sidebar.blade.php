@@ -1,16 +1,11 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    {{-- <a href="{{ asset('adminlte/index3.html')}}" class="brand-link">
-        <img src="{{ asset('adminlte/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8')?>">
-        <span class="brand-text font-weight-light">Filmai</span>
-    </a> --}}
 
     <!-- Sidebar -->
     <div class="sidebar">
         <!-- Sidebar user (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="info">
-                <a href="#" class="d-block">{{Str::title(Auth::user()->fullName)}}</a>
+                <a href="{{route('admin.paintings.index')}}" class="d-block">{{ Str::title(Auth::user()->fullName) }}</a>
             </div>
         </div>
 
@@ -28,15 +23,16 @@
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 
-                <li class="nav-header">DATA TABES</li>
+                <li class="nav-header">{{ Str::upper(__('app.data_tables')) }}</li>
                 <li class="nav-item">
                     <a href="{{ route('admin.paintings.index') }}" class="nav-link">
                         <p>
-                            Paintings
+                            {{ Str::title(__('app.paintings')) }}
                         </p>
                     </a>
                 </li>
@@ -44,7 +40,7 @@
                 <li class="nav-item">
                     <a href="{{ route('admin.artists.index') }}" class="nav-link">
                         <p>
-                            Artists
+                            {{ Str::title(__('app.artist')) }}
                         </p>
                     </a>
                 </li>
@@ -52,7 +48,7 @@
                 <li class="nav-item">
                     <a href="{{ route('admin.colors.index') }}" class="nav-link">
                         <p>
-                            Colors
+                            {{ Str::title(__('app.colors')) }}
                         </p>
                     </a>
                 </li>
@@ -60,7 +56,7 @@
                 <li class="nav-item">
                     <a href="{{ route('admin.frames.index') }}" class="nav-link">
                         <p>
-                            Frames
+                            {{ Str::title(__('app.frames')) }}
                         </p>
                     </a>
                 </li>
@@ -68,7 +64,7 @@
                 <li class="nav-item">
                     <a href="{{ route('admin.locations.index') }}" class="nav-link">
                         <p>
-                            Locations
+                            {{ Str::title(__('app.locations')) }}
                         </p>
                     </a>
                 </li>
@@ -76,7 +72,7 @@
                 <li class="nav-item">
                     <a href="{{ route('admin.methods.index') }}" class="nav-link">
                         <p>
-                            Methods
+                            {{ Str::title(__('app.methods')) }}
                         </p>
                     </a>
                 </li>
@@ -84,7 +80,7 @@
                 <li class="nav-item">
                     <a href="{{ route('admin.movements.index') }}" class="nav-link">
                         <p>
-                            Movements
+                            {{ Str::title(__('app.movements')) }}
                         </p>
                     </a>
                 </li>

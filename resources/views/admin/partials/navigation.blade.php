@@ -9,8 +9,9 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto"> 
         <li class="nav-item">
-            <a class="nav-link"  href="#" role="button">
-                 <i class="fa-solid fa-right-from-bracket"></i>  Logout
+            <a href="{{ route('admin.logout') }}" class="nav-link" role="button">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
             </a>
         </li>
     </ul>

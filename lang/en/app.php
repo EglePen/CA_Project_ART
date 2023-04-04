@@ -5,6 +5,7 @@ return [
     'add_artist' => 'add artist',
     'actions' => 'actions',
     'artist' => 'artist',
+    'artist_id' => 'artist',
     'artists' => 'artists',
     'add_color' => 'add color',
     'add_frame' => 'add frame',
@@ -56,12 +57,14 @@ return [
     'list' => 'list',
     'location' => 'location',
     'locations' => 'locations',
+    'location_id' => 'location',
     'logout' => 'logout',
 
     //M
     'method' => 'method',
     'methods' => 'methods',
     'movement' => 'movement',
+    'movement_id' => 'movement',
     'movements' => 'movements',
 
     //N

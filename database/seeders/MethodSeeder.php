@@ -57,6 +57,17 @@ class MethodSeeder extends Seeder
                 'created_at' => Date::now(),
                 'updated_at' => Date::now(),
             ],
+            [
+                'name'=> 'Gold',
+                'created_at' => Date::now(),
+                'updated_at' => Date::now(),
+            ],
+            [
+                'name'=> 'Silver',
+                'created_at' => Date::now(),
+                'updated_at' => Date::now(),
+            ],
+
         ]);
         
     }

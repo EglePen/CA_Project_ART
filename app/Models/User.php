@@ -51,14 +51,14 @@ class User extends Authenticatable
         $this->attributes['password'] = Hash::make($input);
     }
 
-        /**     
-    * Get the actors's full name. 
-    * @return Attribute     
-    */
+    /**     
+     * Get the actors's full name. 
+     * @return Attribute     
+     */
     protected function fullName(): Attribute
     {
         return Attribute::make(
-            get: fn (mixed $value, array $attributes) =>$attributes['first_name'] . ' ' . $attributes['last_name'], 
+            get: fn (mixed $value, array $attributes) => $attributes['first_name'] . ' ' . $attributes['last_name'],
         );
     }
 }

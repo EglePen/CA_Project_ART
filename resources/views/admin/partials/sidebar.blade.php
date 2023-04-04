@@ -1,15 +1,19 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
-
-    <!-- Sidebar -->
     <div class="sidebar">
-        <!-- Sidebar user (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-            <div class="info">
-                <a href="{{route('admin.paintings.index')}}" class="d-block">{{ Str::title(Auth::user()->fullName) }}</a>
+            <div>
+                <a href="{{route('admin.paintings.index')}}" class="d-block"> 
+                    <h3>
+                        ART AdminPage
+                    </h3>
+                </a>
             </div>
         </div>
-
-        <!-- SidebarSearch Form -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="info">
+                <a href="{{route('admin.paintings.index')}}" class="d-block"><h5>{{ Str::title(Auth::user()->fullName) }}</h5></a>
+            </div>
+        </div>
         <div class="form-inline">
             <div class="input-group" data-widget="sidebar-search">
                 <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
@@ -20,15 +24,10 @@
                 </div>
             </div>
         </div>
-
-        <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                 data-accordion="false">
-                <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-
-                <li class="nav-header">{{ Str::upper(__('app.data_tables')) }}</li>
+                <li class="nav-header"><h6>{{ Str::upper(__('app.data_tables')) }}</h6></li>
                 <li class="nav-item">
                     <a href="{{ route('admin.paintings.index') }}" class="nav-link">
                         <p>
@@ -36,15 +35,13 @@
                         </p>
                     </a>
                 </li>
-
                 <li class="nav-item">
                     <a href="{{ route('admin.artists.index') }}" class="nav-link">
                         <p>
-                            {{ Str::title(__('app.artist')) }}
+                            {{ Str::title(__('app.artists')) }}
                         </p>
                     </a>
                 </li>
-
                 <li class="nav-item">
                     <a href="{{ route('admin.colors.index') }}" class="nav-link">
                         <p>
@@ -52,7 +49,6 @@
                         </p>
                     </a>
                 </li>
-
                 <li class="nav-item">
                     <a href="{{ route('admin.frames.index') }}" class="nav-link">
                         <p>
@@ -60,7 +56,6 @@
                         </p>
                     </a>
                 </li>
-
                 <li class="nav-item">
                     <a href="{{ route('admin.locations.index') }}" class="nav-link">
                         <p>
@@ -68,7 +63,6 @@
                         </p>
                     </a>
                 </li>
-
                 <li class="nav-item">
                     <a href="{{ route('admin.methods.index') }}" class="nav-link">
                         <p>
@@ -76,7 +70,6 @@
                         </p>
                     </a>
                 </li>
-
                 <li class="nav-item">
                     <a href="{{ route('admin.movements.index') }}" class="nav-link">
                         <p>
@@ -84,10 +77,7 @@
                         </p>
                     </a>
                 </li>
-
             </ul>
         </nav>
-        <!-- /.sidebar-menu -->
     </div>
-    <!-- /.sidebar -->
 </aside>

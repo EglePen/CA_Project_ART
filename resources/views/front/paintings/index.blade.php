@@ -16,7 +16,7 @@
                 <article class="painting-card painting-card-hover">
                     <a href="{{ route('front.paintings.show', $painting) }}"></a>
                     <div>
-                        <img src=" {{ asset('storage/images/' . ($painting->image ?? '')) }}">
+                        <img src=" {{ asset('storage/images/' . ($painting->image ?? '')) }}" alt="painting {{$painting->title ?? ''}} ">
                         <h3>
                             {{ $painting->title ?? '' }}
                         </h3>

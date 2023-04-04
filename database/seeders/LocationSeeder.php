@@ -23,7 +23,7 @@ class LocationSeeder extends Seeder
                 'updated_at' => Date::now(),
             ],
             [
-                'name'=> 'Museum of Contemporary Art (MOCA BANGKOK)',
+                'name'=> 'MoMa the Museum of Modern Art',
                 'created_at' => Date::now(),
                 'updated_at' => Date::now(),
             ],
@@ -44,6 +44,21 @@ class LocationSeeder extends Seeder
             ],
             [
                 'name'=> 'Philadelphia Museum of Art',
+                'created_at' => Date::now(),
+                'updated_at' => Date::now(),
+            ],
+            [
+                'name'=> 'Neue Galerie New York',
+                'created_at' => Date::now(),
+                'updated_at' => Date::now(),
+            ],
+            [
+                'name'=> 'The Museum of fine Arts',
+                'created_at' => Date::now(),
+                'updated_at' => Date::now(),
+            ],
+            [
+                'name'=> 'SMK- Statens Museum for Kunst',
                 'created_at' => Date::now(),
                 'updated_at' => Date::now(),
             ],

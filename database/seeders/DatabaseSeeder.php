@@ -21,11 +21,11 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            PaintingSeeder::class,
             MethodSeeder::class,
             ArtistSeeder::class,
             MovementSeeder::class,
             LocationSeeder::class,
+            PaintingSeeder::class,
             FrameSeeder::class,
             ColorSeeder::class,
             MethodPaintingSeeder::class,

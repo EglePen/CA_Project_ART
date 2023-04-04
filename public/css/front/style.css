@@ -35,6 +35,10 @@ nav .logo a {
     color:#363636;
 }
 
+nav .logo a:hover {
+    color:#c69f73;
+}
+
 nav .links {
     font-size: 2rem;
     list-style-type: none;
@@ -131,15 +135,9 @@ nav .links a:before {
 /* collection of paintings main */
 
 section {
-    background-color: #f9f0d0;
+    background-color: #f5e8d8;
     padding: 3rem 0;
     min-height: 80vh;
-    /* min-height: 1000px; */
-    /* height: 100%; */
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
 }
 
 .title h2 {
@@ -220,6 +218,12 @@ section {
     margin: 0 auto;
 }
 
+.zoom:hover {
+    transform: scale(3);
+    border: 1rem solid #fff;
+    box-shadow: 2px 2px 9px 2px #d3d3d3;
+}
+
 .show-painting-card {
     background-color: #ffffff;
     display: flex;
@@ -274,7 +278,6 @@ span:nth-of-type(odd) {
 }
 
 .button a {
-   
     position: absolute;
     display: block;
     width: 100%;

@@ -51,7 +51,7 @@
 
                 <div class="painting-parts">
                     @foreach ($painting->images as $image)
-                        <img src={{ asset('storage/images/' . ($image->name ?? '')) }}>
+                        <img class="zoom" src={{ asset('storage/images/' . ($image->name ?? '')) }}>
                     @endforeach
                 </div>
             </article>

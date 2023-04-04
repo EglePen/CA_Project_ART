@@ -23,7 +23,7 @@ class UpdatePaintingRequest extends FormRequest
     {
         return [
             'title' => 'required|max:100',
-            'year_created' => 'required|numeric',
+            'year_created' => 'required|numeric|digits:4',
             'description' => 'required|string',
             'artist_id' => 'required|exists:artists,id',
             'location_id' => 'required|exists:artists,id',

@@ -27,7 +27,6 @@ use App\Http\Controllers\Admin\Auth\RegistrationController;
 |
 */
 
-//Public routes, accesible to anyone
 Route::name('front.')->group( function () {
     Route::get('/', [FrontHomeController:: class, 'index'])->name('home');
     Route::get('/about', [FrontAboutController::class, 'index'])->name('about');
@@ -35,10 +34,7 @@ Route::name('front.')->group( function () {
     Route::resource('paintings', FrontPaintingController::class)->only(['index','show']);
 });
 
-
-//Routes grouped under admin prefix - admin panel and admin auth routes
 Route::prefix('admin')->name('admin.')->group( function () {
-    //Routes protected by auth middleware, accass to routes only for authenticated users
     Route::middleware('auth')->group(function () {
         Route::get('/', [AdminHomeController::class, 'index'])->name('home');
         Route::resources([
@@ -50,11 +46,8 @@ Route::prefix('admin')->name('admin.')->group( function () {
             'colors' => AdminColorController::class,
             'frames' => AdminFrameController::class,
         ]);
-        //Logout route accassible when authenticated
         Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
     });
-    //Routes protected by guest middleware, accass to routes only for guest - not authenticated users
-    //If user authenticated, redirects to admin.home
     Route::middleware('guest')->name('auth.')->group(function () {
         Route::get('/login', [LoginController::class, 'login'])->name('login');
         Route::post('/authenticate', [LoginController::class, 'authenticate'])->name('authenticate');

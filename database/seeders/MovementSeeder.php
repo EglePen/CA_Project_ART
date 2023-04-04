@@ -47,6 +47,21 @@ class MovementSeeder extends Seeder
                 'created_at' => Date::now(),
                 'updated_at' => Date::now(),
             ],
+            [
+                'name'=> 'Modernism',
+                'created_at' => Date::now(),
+                'updated_at' => Date::now(),
+            ],
+            [
+                'name'=> 'Fauvism',
+                'created_at' => Date::now(),
+                'updated_at' => Date::now(),
+            ],
+            [
+                'name'=> ' Post-Impressionism',
+                'created_at' => Date::now(),
+                'updated_at' => Date::now(),
+            ],
         ]);
     }
 }

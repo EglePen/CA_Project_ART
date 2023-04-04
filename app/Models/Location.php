@@ -5,8 +5,8 @@ namespace App\Models;
 use App\Models\Painting;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Location extends Model
 {
@@ -18,10 +18,10 @@ class Location extends Model
 
     
     /**
-    * @return BelongsToMany
+    * @return HasMany
     */
-    public function paintings(): BelongsToMany
+    public function paintings(): HasMany
     {
-        return $this->belongsToMany(Painting::class);
+        return $this->hasMany(Painting::class);
     }
 }

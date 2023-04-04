@@ -39,7 +39,6 @@
                                 <tr>
                                     <td>{{ $painting->id ?? '' }}</td>
                                     <td>
-                                        {{-- <img width="100" src="{{ ($movie->image ?? '') }}"> --}}
                                         <img width="100"
                                             src="{{ asset('storage/images/' . ($painting->image ?? ($painting->images[0]->name ?? ''))) }} ">
                                     </td>
@@ -47,20 +46,13 @@
                                     <td>{{ $painting->year_created ?? '' }}</td>
                                     <td>{{ $painting->description ?? '' }}</td>
                                     <td>
-                                        @foreach ($painting->artists as $artist)
-                                            <a href="{{ route('admin.artists.edit', $artist) }}"> {{ $artist->FullName }}
-                                            </a>
-                                        @endforeach
+                                        {{ $painting->artist?->first_name}}
                                     </td>
                                     <td>
-                                        @foreach ($painting->locations as $location)
-                                            {{ $location->name }}
-                                        @endforeach
+                                        {{ $painting->location?->name}}
                                     </td>
                                     <td>
-                                        @foreach ($painting->movements as $movement)
-                                            {{ $movement->name }}
-                                        @endforeach
+                                        {{ $painting->movement?->name}}
                                     </td>
                                     <td>
                                         @foreach ($painting->methods as $method)

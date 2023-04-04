@@ -35,7 +35,7 @@ class AdminPaintingController extends Controller
      */
     public function create(): View
     {
-        $artists = Artist::get();
+        $artists= Artist::get();
         $colors = Color::get();
         $locations = Location::get();
         $methods = Method::get();

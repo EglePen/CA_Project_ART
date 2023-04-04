@@ -17,7 +17,7 @@
                         placeholder="{{ Str::ucfirst(__('app.dimensions')) }}">
                 </div>
                 <div class="form-group">
-                    <label for="price">{{ Str::title(__('app.price')) }}, €</label>
+                    <label for="price">{{ Str::title(__('app.price')) }}, &euro;</label>
                     <input type="text" class="form-control" name="price" id="price"
                         placeholder="{{ Str::ucfirst(__('app.price')) }}">
                 </div>

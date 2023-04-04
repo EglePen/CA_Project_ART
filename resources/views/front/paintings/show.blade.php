@@ -23,13 +23,12 @@
 
                         <div>
                             <span>{{ Str::title(__('app.artist')) }}:</span>
-                            <span>{{ $painting?->artists->pluck('first_name')->implode(', ') ?? '' }}
-                                {{ $painting?->artists->pluck('last_name')->implode(', ') ?? '' }}</span>
+                            <span>{{ $painting->artist?->first_name}} {{ $painting->artist?->last_name}} </span>
                         </div>
 
                         <div>
                             <span>{{ Str::title(__('app.location')) }}:</span>
-                            <span>{{ $painting?->locations->pluck('name')->implode(', ') ?? '' }}</span>
+                            <span>{{ $painting->location?->name }}</span>
                         </div>
 
                         <div>
@@ -38,7 +37,7 @@
                         </div>
                         <div>
                             <span>{{ Str::title(__('app.movement')) }}:</span>
-                            <span>{{ $painting?->movements->pluck('name')->implode(', ') ?? '' }}</span>
+                            <span>{{ $painting->movement?->name }}</span>
                         </div>
                         <div>
                             <span>{{ Str::title(__('app.colors')) }}:</span>
@@ -76,7 +75,7 @@
                         <tr>
                             <th scope="row">{{ $frame->id ?? '' }}</th>
                             <td>{{ $frame->dimensions ?? '' }} cm</td>
-                            <td>{{ $frame->price ?? '' }} €</td>
+                            <td>{{ $frame->price ?? '' }} &euro;</td>
                         </tr>
                     @endforeach
                 </tbody>

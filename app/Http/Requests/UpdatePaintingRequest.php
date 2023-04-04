@@ -23,9 +23,15 @@ class UpdatePaintingRequest extends FormRequest
     {
         return [
             'title' => 'required|max:100',
-            'image' => 'required',
             'year_created' => 'required|numeric',
-            'description' => 'required',
+            'description' => 'required|string',
+            'artist_id' => 'required|exists:artists,id',
+            'location_id' => 'required|exists:artists,id',
+            'movement_id' => 'required|exists:artists,id',
+            'colors' => 'required|array|min:1',
+            'methods' => 'required|array|min:1',
+            'colors.*' => 'required|exists:colors,id',
+            'methods.*' => 'required|exists:methods,id',
         ];
     }
 }

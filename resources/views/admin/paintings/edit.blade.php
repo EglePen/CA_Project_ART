@@ -30,15 +30,15 @@
                             placeholder="{{ Str::ucfirst(__('app.description')) }}">
                     </div>
 
-                    <x-forms.relation-select :tagName="'artists'" :model="$painting" :relationItems="$artists" :optionDisplay="'fullName'" />
+                    <x-forms.relation-select :tagName="'artist_id'" :model="$painting" :relationItems="$artists" :optionDisplay="'fullName'" />
 
                     <x-forms.multi-relation-select :tagName="'colors'" :model="$painting" :relationItems="$colors" />
 
-                    <x-forms.relation-select :tagName="'locations'" :model="$painting" :relationItems="$locations" />
+                    <x-forms.relation-select :tagName="'location_id'" :model="$painting" :relationItems="$locations" />
 
-                    <x-forms.relation-select :tagName="'movements'" :model="$painting" :relationItems="$movements" />
+                    <x-forms.relation-select :tagName="'movement_id'" :model="$painting" :relationItems="$movements" />
 
-                    <x-forms.relation-select :tagName="'methods'" :model="$painting" :relationItems="$methods" />
+                    <x-forms.multi-relation-select :tagName="'methods'" :model="$painting" :relationItems="$methods" />
 
                     <div class="form-group">
                         <x-forms.image-input :images="[$painting->image]" :label="'cover-image'" :inputName="'image'" :oldInputName="'old_cover_image'" />

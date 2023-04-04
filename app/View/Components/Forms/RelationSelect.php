@@ -46,7 +46,7 @@ class RelationSelect extends Component
 
 public function selected($relationItem)
 {
-   return $this->model?->{$this->relationName}->contains($relationItem->id);     
+   return $this->model?->{$this->relationName} === $relationItem->id;  
 }
 
     /**

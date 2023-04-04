@@ -22,8 +22,8 @@ class UpdateArtistRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'first_name' => 'required|50',
-            'last_name' => 'required|50',
+            'first_name' => 'required',
+            'last_name' => 'required',
             'date_of_birth' => 'required',
         ];
     }

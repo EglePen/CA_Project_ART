@@ -8,7 +8,7 @@
 
         <div class="card">
             <div class="card-body login-card-body">
-                <p class="login-box-msg">{{ Str::ucfirst(__('app.sing_in')) }}</p>
+                <p class="login-box-msg">{{ Str::ucfirst(__('app.sign_in')) }}</p>
                 <form action="{{ route('admin.auth.authenticate') }}" method="post">
                     @csrf
                     <div class="input-group mb-3">
@@ -32,7 +32,7 @@
                     <div class="row">
                         <div class="col-4">
                             <button type="submit"
-                                class="btn btn-primary btn-block">{{ Str::ucfirst(__('app.sing_in')) }}</button>
+                                class="btn btn-primary btn-block">{{ Str::ucfirst(__('app.sign_in')) }}</button>
                         </div>
                     </div>
                 </form>

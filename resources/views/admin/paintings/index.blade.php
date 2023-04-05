@@ -47,6 +47,7 @@
                                     <td>{{ $painting->description ?? '' }}</td>
                                     <td>
                                         {{ $painting->artist?->first_name}}
+                                        {{ $painting->artist?->last_name}}
                                     </td>
                                     <td>
                                         {{ $painting->location?->name}}

@@ -28,8 +28,8 @@
                             @foreach ($frames as $frame)
                                 <tr>
                                     <td>{{ $frame->id ?? '' }}</td>
-                                    <td>{{ $frame->dimensions ?? '' }}, cm</td>
-                                    <td>{{ $frame->price ?? '' }}, &euro;</td>
+                                    <td>{{ $frame->dimensions ?? '' }} cm</td>
+                                    <td>{{ $frame->price ?? '' }} &euro;</td>
                                     <td>{{ $frame->created_at ?? '' }}</td>
                                     <td>{{ $frame->updated_at ?? '' }}</td>
                                     <td>

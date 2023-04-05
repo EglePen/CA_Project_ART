@@ -1,7 +1,5 @@
 body, html {
-    /* height: 100%; */
-    margin: auto 0;
-   
+    margin: auto 0; 
 }
 
 * {
@@ -293,7 +291,6 @@ span:nth-of-type(odd) {
 }
 
 /* frames main */
-
 
 .table {
     max-width: 1400px;

@@ -218,8 +218,8 @@ section {
 
 .zoom:hover {
     transform: scale(3);
-    border: 1rem solid #fff;
-    box-shadow: 2px 2px 9px 2px #d3d3d3;
+    border: 0.3rem solid #eee;
+    box-shadow: 0px 0px 6px 3px rgba(0,0,0,0.4);
 }
 
 .show-painting-card {
@@ -241,6 +241,7 @@ section {
 }
 .painting-parts img {
     max-width: 250px;
+    transition: 0.8s;
 }
 
 .show-paintings-card-text {
